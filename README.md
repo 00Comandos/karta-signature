@@ -9,6 +9,7 @@ Colección de firmas de correo electrónico HTML personalizadas para diferentes 
 | `karta-emailSignature.html` | Karta | [conkarta.com](https://www.conkarta.com/) |
 | `Comandos-emailSignature.html` | Comandos Studio | [comandos.me](https://comandos.me/) |
 | `Tolmin-emailSignature.html` | Tolmin | [usetolmin.com](https://usetolmin.com/) |
+| `Paladio-emailSignature.html` | Paladio | [usepaladio.com](https://usepaladio.com/) |
 
 ## Uso
 
@@ -31,8 +32,24 @@ karta-signature/
 ├── README.md
 ├── karta-emailSignature.html
 ├── Comandos-emailSignature.html
-└── Tolmin-emailSignature.html
+├── Tolmin-emailSignature.html
+└── Paladio-emailSignature.html
 ```
+
+## Paladio
+
+Misma estructura que la firma de Karta, con la marca de Paladio:
+
+- **Isotipo**: `https://usepaladio.com/brand/isotype-light.png` (versión oscura,
+  para fondo blanco). Para firmas sobre fondo oscuro usa `isotype-dark.png`.
+  Si prefieres el logotipo con la palabra «PALADIO» en vez del isotipo, cambia
+  a `logo-light.png` y sube el `width` a `140`.
+- **Color de tinta**: `#0f0f11` (`--color-ink-900` de los tokens de Paladio).
+  El azul de marca (`#3d7bfd`) se deja fuera a propósito: sobre fondo claro
+  compite con los CTA y la tinta ancla mejor, igual que en el tema claro del
+  producto.
+- **Cargo**: en español («CEO de Paladio»), como en el sitio. Para
+  correspondencia en inglés, cámbialo a «Chief Executive Officer».
 
 ## Personalización
 

@@ -20,6 +20,20 @@ Colección de firmas de correo electrónico HTML personalizadas para diferentes 
 ### Gmail
 1. Configuración → Ver todos los ajustes → General → Firma
 2. Pega el código HTML
+3. **Baja a «Valores predeterminados de firma»** y asigna la firma a su
+   dirección
+
+El paso 3 es el que se olvida. Cuando la cuenta tiene varias direcciones en
+«Enviar como», Gmail dibuja una fila por dirección con dos desplegables
+(correos nuevos / respuestas y reenvíos), y una dirección recién agregada nace
+en «Sin firma». Pegar el HTML no basta: sin asignarla ahí, la firma no se
+inserta sola al cambiar el remitente.
+
+|  | Correos nuevos | Respuestas |
+|---|---|---|
+| `c@comandos.me` | Comandos Studio LLC | Comandos Studio LLC |
+| `c@usepaladio.com` | Paladio | Paladio |
+| `c@usetolmin.com` | Tolmin | Tolmin |
 
 ### Outlook
 1. Configuración → Correo → Redactar y responder → Firma de correo electrónico

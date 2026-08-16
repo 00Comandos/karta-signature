@@ -40,16 +40,19 @@ karta-signature/
 
 Misma estructura que la firma de Karta, con la marca de Paladio:
 
-- **Isotipo**: `https://usepaladio.com/brand/isotype-light.png` (versión oscura,
-  para fondo blanco). Para firmas sobre fondo oscuro usa `isotype-dark.png`.
-  Si prefieres el logotipo con la palabra «PALADIO» en vez del isotipo, cambia
-  a `logo-light.png` y sube el `width` a `140`.
+- **Avatar**: `https://usepaladio.com/brand/avatar.png` — el lockup cuadrado
+  (isotipo + wordmark en plata sobre negro). Cumple el mismo papel que la
+  tarjeta metálica en la firma de Karta: una pieza oscura y autocontenida
+  sobre el fondo blanco del correo.
+  El archivo vive en `packages/brand/assets/` de `paladio-project`, que es la
+  copia única; `sync.mjs` lo reparte a `public/brand` en cada build. No lo
+  edites en `site/public/brand`: esa carpeta está gitignoreada y se regenera.
+- **`width="88"`**: por debajo de eso la palabra «PALADIO» del lockup deja de
+  leerse; por encima el bloque negro le gana al texto.
 - **Color de tinta**: `#0f0f11` (`--color-ink-900` de los tokens de Paladio).
   El azul de marca (`#3d7bfd`) se deja fuera a propósito: sobre fondo claro
   compite con los CTA y la tinta ancla mejor, igual que en el tema claro del
   producto.
-- **Cargo**: en español («CEO de Paladio»), como en el sitio. Para
-  correspondencia en inglés, cámbialo a «Chief Executive Officer».
 
 ### UTMs
 

@@ -51,6 +51,30 @@ Misma estructura que la firma de Karta, con la marca de Paladio:
 - **Cargo**: en español («CEO de Paladio»), como en el sitio. Para
   correspondencia en inglés, cámbialo a «Chief Executive Officer».
 
+### UTMs
+
+El enlace a `usepaladio.com` va etiquetado para poder separar el tráfico que
+entra por firma de correo:
+
+| Parámetro | Valor | Por qué |
+|---|---|---|
+| `utm_source` | `email-signature` | La superficie de la que viene el clic |
+| `utm_medium` | `email` | Canal |
+| `utm_campaign` | `firma-correo` | Fijo para todo el equipo: agrupa toda la firma como una sola campaña |
+| `utm_content` | `carlos-perez` | Quién firma. Al agregar la firma de otra persona, esto es lo único que cambia |
+
+El texto visible del enlace se queda limpio (`usepaladio.com`); los parámetros
+solo viven en el `href`. En el HTML los separadores van como `&amp;`, que es lo
+que exige un atributo HTML — el navegador los entrega como `&`.
+
+El enlace de LinkedIn no lleva UTMs a propósito: apunta a linkedin.com, donde
+nuestra analítica no ve nada.
+
+Nota: hoy `usepaladio.com` carga GA4 (`site/src/components/Analytics.astro`),
+no PostHog. Los `utm_*` son estándar y PostHog los autocaptura como
+`$initial_utm_*` en cuanto se instale, así que el etiquetado ya queda bien;
+mientras tanto estos clics se leen en GA4.
+
 ## Personalización
 
 Para crear una nueva firma, copia cualquiera de los archivos existentes y modifica:
